@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #btn {
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+    <div>
+        Nhập nội dung tìm kiếm
+        <input type="text">
+        <a href="#" id="link">Ẩn tìm kiếm nâng cao</a>
+    </div>
+    <div>
+        <select id="select">
+            <option value="">Quần áo</option>
+            <option value="">Quần áo</option>
+        </select>
+    </div>
+    <button id="btn">Tìm kiếm</button>
+
+    <script>
+        let select = document.getElementById("select")
+        let a = document.getElementById("link")
+        let text = document.getElementById("text")
+        a.addEventListener("click", () => {
+            if (select.style.display == "none") {
+                select.style.display = "block"
+                a.textContent = "Ẩn tìm kiếm nâng cao"
+            } else {
+                select.style.display = "none"
+                a.textContent = "Tìm kiếm nâng cao"
+            }
+
+        })
+    </script>
+</body>
+
+</html>

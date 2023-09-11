@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>Create New Item</h2>
+        item <input type="text" id="input">
+        <button id="btn">add</button>
+    </div>
+    <div>
+        <ul id="ul">
+            <li>Nho Mỹ</li>
+            <li>Táo tàu</li>
+        </ul>
+    </div>
+    <script>
+        let input = document.getElementById("input")
+        input.style.backgroundColor = "yellow"
+        let btn = document.getElementById("btn")
+        let text = input.value;
+
+        input.addEventListener("input", () => {
+            text = input.value
+            if (text == "") {
+                input.style.backgroundColor = "yellow"
+            } else {
+                input.style.backgroundColor = "white";
+            }
+        })
+        btn.addEventListener("click", () => {
+            text = input.value;
+            // let ul = document.getElementById("ul");
+            let li = document.createElement("li");
+            ul.appendChild(li);
+            li.innerHTML = text;
+            input.value = "";
+            input.style.backgroundColor = "yellow"
+
+        })
+    </script>
+</body>
+
+</html>

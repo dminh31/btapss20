@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="newDiv"></div>
+    <script>
+        let newDiv=document.getElementById("newDiv")
+        newDiv.innerHTML = "Nhap noi dung tim kiem"
+
+        let input = document.createElement("input")
+        newDiv.appendChild(input)
+
+        let a = document.createElement("a")
+        a.innerHTML = "<a href=''>tim kiem nang cao</a> <br>"
+        newDiv.appendChild(a)
+
+        let select = document.createElement("select")
+        newDiv.appendChild(select)
+
+        let opt1 =document.createElement("option")
+        let opt2 = document.createElement("option")
+        select.appendChild(opt1)
+        select.appendChild(opt2)
+        opt1.innerHTML = "Quần áo"
+        opt2.innerHTML = "Quần áo"
+        newDiv.appendChild(document.createElement('br'))
+        select.style.marginBottom = "20px"
+
+        let button = document.createElement("button")
+        button.innerHTML = "Tìm kiếm"
+        newDiv.appendChild(button)
+    </script>
+</body>
+</html>
